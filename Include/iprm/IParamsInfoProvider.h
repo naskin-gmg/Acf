@@ -7,7 +7,7 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include <istd/IPolymorphic.h>
+#include <istd/IChangeable.h>
 
 #include <iprm/iprm.h>
 
@@ -27,7 +27,7 @@ namespace iprm
 	\code{.cpp}
 	// Get parameter info provider from a parameter set
 	const iprm::IParamsInfoProvider* infoProvider = paramsSet->GetParamsInfoProvider();
-	if (infoProvider)
+	if (infoProvider != nullptr)
 	{
 	    // Get information about a specific parameter
 	    iprm::IParamsInfoProvider::ParamInfo info;
@@ -44,7 +44,7 @@ namespace iprm
 	
 	\see IParamsSet
 */
-class IParamsInfoProvider: virtual public istd::IPolymorphic
+class IParamsInfoProvider: virtual public istd::IChangeable
 {
 public:
 	/**

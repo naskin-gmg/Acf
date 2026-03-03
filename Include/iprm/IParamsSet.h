@@ -186,7 +186,7 @@ public:
 		
 		\code{.cpp}
 		const iprm::IParamsInfoProvider* infoProvider = paramsSet->GetParamsInfoProvider();
-		if (infoProvider)
+		if (infoProvider != nullptr)
 		{
 		    iprm::IParamsInfoProvider::ParamInfo info;
 		    if (infoProvider->GetParamInfo("threshold", info))
